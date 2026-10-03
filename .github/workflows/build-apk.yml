@@ -15,6 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Unzip app sources
+        run: |
+          unzip -oq .github/workflows/safeher_user_flutter.zip
+          unzip -oq .github/workflows/safeher_admin_flutter.zip
+          ls
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
